@@ -19,14 +19,14 @@ using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, Buff
 
         if (row.Length >= 2)
         {
-            leftList.Add(int.Parse(row[0]));  // Add the first element to leftList
-            rightList.Add(int.Parse(row[1])); // Add the second element to rightList
+            leftList.Add(int.Parse(row[0]));
+            rightList.Add(int.Parse(row[1]));
         }
     }
     leftList.Sort();
     rightList.Sort();
 
-    int totalDistance = 0; 
+    int totalDistance = 0;
     for (var x = 0; x < leftList.Count; x++)
     {
         totalDistance += Math.Abs(leftList[x] - rightList[x]);
