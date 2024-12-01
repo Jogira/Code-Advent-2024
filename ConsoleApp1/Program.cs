@@ -9,11 +9,8 @@ const Int32 BufferSize = 128;
 using (var fileStream = File.OpenRead("../../../input.txt"))
 using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
 {
-    // Initialize Lists to hold the left and right values
     List<int> leftList = new List<int>();
     List<int> rightList = new List<int>();
-
-    int i = 0;
 
     string line;
     while ((line = streamReader.ReadLine()) != null)
